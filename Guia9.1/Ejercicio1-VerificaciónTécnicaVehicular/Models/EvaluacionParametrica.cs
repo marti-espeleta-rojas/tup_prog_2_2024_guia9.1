@@ -19,15 +19,16 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
             ValorMaximo = maximo;
             Unidad = unidad;
             ValorTolerado = tolerado;
+            ValorMedido = ValorMaximo - ValorMinimo;
         }
         public override TipoAprobacion Evaluar()
         {
             if (ValorMedido < 0) return TipoAprobacion.NoValido;
-            if (ValorMedido==30)
+            if (ValorMedido == 30)
             {
                 return TipoAprobacion.Aprobado;
             }
-            if (ValorMedido>=21)
+            if (ValorMedido >= 21)
             {
                 return TipoAprobacion.Parcial;
             }

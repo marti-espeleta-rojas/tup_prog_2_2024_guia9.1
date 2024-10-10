@@ -10,27 +10,46 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
     public class FiscalizadorVTV
     {
         public int CantidadVTV { get; private set; }
-        public List<VTV> verificaciones = new List<VTV>();
+        public List<VTV> vtvs = new List<VTV>();
         public string PlantillaComprobante { get; set; }
         public VTV this[int idx]
         {
             get
             {
-                return verificaciones[idx];
+                if (idx > vtvs.Count)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                else
+                {
+                    return vtvs[idx];
+                }
             }
         }
-        public VTV AgregarVTV(string patente, Propietario propietario)
+        public VTV AgregarVTV(string patente, Propietario propietario, DateTime fecha)
         {
-            VTV vtv = new VTV(patente, propietario);
-            verificaciones.Add(vtv);
+            VTV vtv = new VTV(patente, propietario, fecha);
+            vtvs.Add(vtv);
             return vtv;
         }
 
         public List<VTV> VerVTVPorPatente(string patente)
         {
-            verificaciones.Sort();
-            List<VTV> vtvs = verificaciones.BinarySearch(patente);
-            return verificaciones;
+            List<VTV> NuevaVtvs = null;
+            //hago búsqueda secuencial para encontrar todas las ocurrencias
+            for(int i = 0; i < CantidadVTV; i++)
+            {
+                if(patente == vtvs[i].Patente)
+                {
+                    NuevaVtvs.Add(vtvs[i]);
+                }
+            }
+
+            return NuevaVtvs;
+        }
+        public void OrdenarVTVsPorDNIPropietario()
+        {
+            vtvs.Sort();//por DNI de propietario
         }
     }
 }

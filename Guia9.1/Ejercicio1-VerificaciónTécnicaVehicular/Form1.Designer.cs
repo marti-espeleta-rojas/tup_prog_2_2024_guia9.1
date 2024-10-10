@@ -29,21 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnIniciarCarga = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbDNI = new System.Windows.Forms.TextBox();
-            this.tbApellidosYNombres = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbCorreo = new System.Windows.Forms.TextBox();
+            this.tbApellidosYNombres = new System.Windows.Forms.TextBox();
+            this.tbDNI = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnVerVTVRealizados = new System.Windows.Forms.Button();
+            this.tbPatente = new System.Windows.Forms.TextBox();
+            this.dateTimeHoy = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -53,10 +56,52 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(665, 413);
+            this.groupBox1.Size = new System.Drawing.Size(597, 315);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro VTV";
+            // 
+            // btnIniciarCarga
+            // 
+            this.btnIniciarCarga.Location = new System.Drawing.Point(223, 282);
+            this.btnIniciarCarga.Name = "btnIniciarCarga";
+            this.btnIniciarCarga.Size = new System.Drawing.Size(117, 23);
+            this.btnIniciarCarga.TabIndex = 2;
+            this.btnIniciarCarga.Text = "Iniciar Carga VTV";
+            this.btnIniciarCarga.UseVisualStyleBackColor = true;
+            this.btnIniciarCarga.Click += new System.EventHandler(this.btnIniciarCarga_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnBuscar);
+            this.groupBox3.Controls.Add(this.dateTimeHoy);
+            this.groupBox3.Controls.Add(this.tbPatente);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Location = new System.Drawing.Point(7, 160);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(578, 116);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Datos del Vehículo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Fecha de Hoy";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Patente";
             // 
             // groupBox2
             // 
@@ -73,61 +118,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Propietario";
             // 
-            // groupBox3
+            // tbCorreo
             // 
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(7, 160);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(578, 181);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos del Vehículo";
+            this.tbCorreo.Location = new System.Drawing.Point(166, 96);
+            this.tbCorreo.Name = "tbCorreo";
+            this.tbCorreo.Size = new System.Drawing.Size(199, 20);
+            this.tbCorreo.TabIndex = 5;
             // 
-            // btnIniciarCarga
+            // tbApellidosYNombres
             // 
-            this.btnIniciarCarga.Location = new System.Drawing.Point(173, 361);
-            this.btnIniciarCarga.Name = "btnIniciarCarga";
-            this.btnIniciarCarga.Size = new System.Drawing.Size(75, 23);
-            this.btnIniciarCarga.TabIndex = 2;
-            this.btnIniciarCarga.Text = "Iniciar Carga VTV";
-            this.btnIniciarCarga.UseVisualStyleBackColor = true;
+            this.tbApellidosYNombres.Location = new System.Drawing.Point(166, 61);
+            this.tbApellidosYNombres.Name = "tbApellidosYNombres";
+            this.tbApellidosYNombres.Size = new System.Drawing.Size(199, 20);
+            this.tbApellidosYNombres.TabIndex = 4;
             // 
-            // button2
+            // tbDNI
             // 
-            this.button2.Location = new System.Drawing.Point(685, 33);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ver VTV Resultados";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tbDNI.Location = new System.Drawing.Point(166, 31);
+            this.tbDNI.Name = "tbDNI";
+            this.tbDNI.Size = new System.Drawing.Size(199, 20);
+            this.tbDNI.TabIndex = 3;
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Patente";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Fecha de Hoy";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "DNI";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(76, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Correo";
             // 
             // label4
             // 
@@ -138,50 +157,61 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Apellidos y Nombres";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Correo";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(88, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "DNI";
             // 
-            // tbDNI
+            // btnVerVTVRealizados
             // 
-            this.tbDNI.Location = new System.Drawing.Point(166, 31);
-            this.tbDNI.Name = "tbDNI";
-            this.tbDNI.Size = new System.Drawing.Size(100, 20);
-            this.tbDNI.TabIndex = 3;
+            this.btnVerVTVRealizados.Location = new System.Drawing.Point(616, 23);
+            this.btnVerVTVRealizados.Name = "btnVerVTVRealizados";
+            this.btnVerVTVRealizados.Size = new System.Drawing.Size(103, 61);
+            this.btnVerVTVRealizados.TabIndex = 1;
+            this.btnVerVTVRealizados.Text = "Ver VTV Realizados";
+            this.btnVerVTVRealizados.UseVisualStyleBackColor = true;
             // 
-            // tbApellidosYNombres
+            // tbPatente
             // 
-            this.tbApellidosYNombres.Location = new System.Drawing.Point(166, 61);
-            this.tbApellidosYNombres.Name = "tbApellidosYNombres";
-            this.tbApellidosYNombres.Size = new System.Drawing.Size(100, 20);
-            this.tbApellidosYNombres.TabIndex = 4;
+            this.tbPatente.Location = new System.Drawing.Point(123, 28);
+            this.tbPatente.Name = "tbPatente";
+            this.tbPatente.Size = new System.Drawing.Size(200, 20);
+            this.tbPatente.TabIndex = 2;
             // 
-            // tbCorreo
+            // dateTimeHoy
             // 
-            this.tbCorreo.Location = new System.Drawing.Point(166, 96);
-            this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.Size = new System.Drawing.Size(100, 20);
-            this.tbCorreo.TabIndex = 5;
+            this.dateTimeHoy.Location = new System.Drawing.Point(123, 78);
+            this.dateTimeHoy.Name = "dateTimeHoy";
+            this.dateTimeHoy.Size = new System.Drawing.Size(200, 20);
+            this.dateTimeHoy.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(329, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(722, 334);
+            this.Controls.Add(this.btnVerVTVRealizados);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -192,7 +222,7 @@
         private System.Windows.Forms.Button btnIniciarCarga;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnVerVTVRealizados;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbCorreo;
@@ -201,6 +231,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateTimeHoy;
+        private System.Windows.Forms.TextBox tbPatente;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 
