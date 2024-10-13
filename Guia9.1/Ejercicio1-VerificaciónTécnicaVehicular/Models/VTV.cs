@@ -11,6 +11,37 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
     {
         public string Patente { get; private set; }
         public DateTime Fecha { get; private set; }
+        private DateTime fechaVenc;
+        public DateTime FechaVencimiento
+        {
+            get
+            {
+                int contDH = 0; //contador de días hábiles
+                DateTime fechaAct = Fecha;
+                if (Aprobacion == TipoAprobacion.Parcial)
+                {
+                    while (contDH < 20)
+                    {
+                        if (fechaAct.DayOfWeek != DayOfWeek.Saturday || fechaAct.DayOfWeek != DayOfWeek.Sunday)
+                        {
+                            contDH++;
+                            fechaAct.AddDays(1);
+                        }
+                        fechaAct.AddDays(1);
+                    }
+                    return fechaAct;
+                }
+                if (Aprobacion == TipoAprobacion.Aprobado)
+                {
+                    return fechaAct.AddYears(1);
+                }
+                else
+                {
+                    fechaAct = DateTime.MinValue;
+                    return fechaAct;
+                }
+            }
+        }
         public int CantidadEvaluaciones
         {
             get
@@ -27,6 +58,10 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
             {
                 return evaluaciones[idx]; 
             }
+            set
+            {
+                evaluaciones[idx] = value;
+            }
         }
 
         public int CompareTo(object obj)
@@ -41,7 +76,15 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
 
         public VTV(string patente, Propietario propietario, DateTime fecha)
         {
-            if(Regex.Match(patente.Replace(" ", ""), @"^[A-Z]{2}[0-9]{3}[A-Z]{2}$ | ^[A-Z]{3}[0-9]{3}$").Success)
+            if(Regex.Match(patente.Replace(" ", ""), @"^(?:[A-Z]{3}\d{3}|[A-Z]{2}\d{3}[A-Z]{2})$").Success)
+                /* Comento la expresión: inicio y fin de cadena son ^ y $ respectivamente.
+                 * (?: ) la expresión que está dentro de los paréntesis representa un 
+                 * grupo no capturante; es decir, la cadena puede coincidir con cualquiera
+                 * de las expresiones regulares definidas. 
+                 * \d representa cualquier dígito numérico (equivalente a [0-9])
+                 * | representa que se está definiendo otra expresión diferente a la anterior
+                 * {2}{3} representa número de apariciones de cada caracter.
+                 */
             {
                 Patente = patente;
                 Propietario = propietario;
@@ -60,20 +103,24 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
             c[1] = $"Fecha: {Fecha}";
             for (int i = 0; i < CantidadEvaluaciones - 1; i++)
             {
-                Aprobacion = evaluaciones[i].Evaluar();
-                c[i] = Aprobacion.ToString() + evaluaciones[i].ToString();
+                c[i] = evaluaciones[i].ToString();
                 //polimorfismo acá
             }
             return c;
         }
 
+        public override string ToString() // esta vez le agregué una cierta lógica al ToString().
+        {
+            if (FechaVencimiento == DateTime.MinValue) //checkeo la fecha de vencimiento para mostrar
+            {
+                return $"Patente: {Patente}\r\nAprobacion: {Aprobacion}\r\nDNI: {Propietario.DNI}\r\nFecha: {Fecha}\r\nFecha Vencimiento: -\r\n\r\n";
+            }
+            return $"Patente: {Patente}\r\nAprobacion: {Aprobacion}\r\nDNI: {Propietario.DNI}\r\nFecha: {Fecha}\r\nFecha Vencimiento: {FechaVencimiento}\r\n\r\n";
+        }
+
         public void AgregarEvaluacion(Evaluacion eva)
         {
             evaluaciones.Add(eva);
-        }
-        public override string ToString()
-        {
-            return $"Patente: {Patente}\r\nFecha: {Fecha}";
         }
     }
 }

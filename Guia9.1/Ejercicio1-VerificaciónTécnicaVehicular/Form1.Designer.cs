@@ -31,6 +31,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnIniciarCarga = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dateTimeHoy = new System.Windows.Forms.DateTimePicker();
+            this.tbPatente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -41,9 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnVerVTVRealizados = new System.Windows.Forms.Button();
-            this.tbPatente = new System.Windows.Forms.TextBox();
-            this.dateTimeHoy = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,6 +84,30 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Vehículo";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(329, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // dateTimeHoy
+            // 
+            this.dateTimeHoy.Location = new System.Drawing.Point(123, 78);
+            this.dateTimeHoy.Name = "dateTimeHoy";
+            this.dateTimeHoy.Size = new System.Drawing.Size(200, 20);
+            this.dateTimeHoy.TabIndex = 3;
+            // 
+            // tbPatente
+            // 
+            this.tbPatente.Location = new System.Drawing.Point(123, 28);
+            this.tbPatente.Name = "tbPatente";
+            this.tbPatente.Size = new System.Drawing.Size(200, 20);
+            this.tbPatente.TabIndex = 2;
             // 
             // label2
             // 
@@ -174,29 +198,7 @@
             this.btnVerVTVRealizados.TabIndex = 1;
             this.btnVerVTVRealizados.Text = "Ver VTV Realizados";
             this.btnVerVTVRealizados.UseVisualStyleBackColor = true;
-            // 
-            // tbPatente
-            // 
-            this.tbPatente.Location = new System.Drawing.Point(123, 28);
-            this.tbPatente.Name = "tbPatente";
-            this.tbPatente.Size = new System.Drawing.Size(200, 20);
-            this.tbPatente.TabIndex = 2;
-            // 
-            // dateTimeHoy
-            // 
-            this.dateTimeHoy.Location = new System.Drawing.Point(123, 78);
-            this.dateTimeHoy.Name = "dateTimeHoy";
-            this.dateTimeHoy.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeHoy.TabIndex = 3;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(329, 26);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnVerVTVRealizados.Click += new System.EventHandler(this.btnVerVTVRealizados_Click);
             // 
             // Form1
             // 

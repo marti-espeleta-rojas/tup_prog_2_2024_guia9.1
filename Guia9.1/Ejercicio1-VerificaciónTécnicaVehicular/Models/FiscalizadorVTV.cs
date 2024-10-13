@@ -18,12 +18,9 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
             {
                 if (idx > vtvs.Count)
                 {
-                    throw new IndexOutOfRangeException();
+                    throw new IndexOutOfRangeException("No existe la evaluación solicitada");
                 }
-                else
-                {
-                    return vtvs[idx];
-                }
+                return vtvs[idx];
             }
         }
         public VTV AgregarVTV(string patente, Propietario propietario, DateTime fecha)
@@ -47,9 +44,10 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
 
             return NuevaVtvs;
         }
-        public void OrdenarVTVsPorDNIPropietario()
+        public List<VTV> OrdenarVTVsPorDNIPropietario()
         {
             vtvs.Sort();//por DNI de propietario
+            return vtvs;
         }
     }
 }

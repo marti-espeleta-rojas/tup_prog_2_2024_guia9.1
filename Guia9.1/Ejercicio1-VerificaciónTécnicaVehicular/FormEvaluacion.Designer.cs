@@ -32,18 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Porcentaje = new System.Windows.Forms.Label();
+            this.tbValorMedido = new System.Windows.Forms.TextBox();
+            this.tbMaximo = new System.Windows.Forms.TextBox();
+            this.tbMinimo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbFuncionamientoCorrect = new System.Windows.Forms.CheckBox();
             this.btSiguiente = new System.Windows.Forms.Button();
             this.dmdDescripcionEvaluacion = new System.Windows.Forms.DomainUpDown();
-            this.tbMinimo = new System.Windows.Forms.TextBox();
-            this.tbMaximo = new System.Windows.Forms.TextBox();
-            this.tbValorMedido = new System.Windows.Forms.TextBox();
-            this.Porcentaje = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbFuncionamientoCorrect = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +97,76 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Evaluación Paramétrica";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(414, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Valor Medido";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(274, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Máximo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(112, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Mínimo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Valores";
+            // 
+            // Porcentaje
+            // 
+            this.Porcentaje.AutoSize = true;
+            this.Porcentaje.Location = new System.Drawing.Point(517, 49);
+            this.Porcentaje.Name = "Porcentaje";
+            this.Porcentaje.Size = new System.Drawing.Size(58, 13);
+            this.Porcentaje.TabIndex = 3;
+            this.Porcentaje.Text = "Porcentaje";
+            // 
+            // tbValorMedido
+            // 
+            this.tbValorMedido.Location = new System.Drawing.Point(400, 49);
+            this.tbValorMedido.Name = "tbValorMedido";
+            this.tbValorMedido.Size = new System.Drawing.Size(100, 20);
+            this.tbValorMedido.TabIndex = 2;
+            // 
+            // tbMaximo
+            // 
+            this.tbMaximo.Enabled = false;
+            this.tbMaximo.Location = new System.Drawing.Point(249, 50);
+            this.tbMaximo.Name = "tbMaximo";
+            this.tbMaximo.Size = new System.Drawing.Size(100, 20);
+            this.tbMaximo.TabIndex = 1;
+            this.tbMaximo.Text = "30";
+            // 
+            // tbMinimo
+            // 
+            this.tbMinimo.Enabled = false;
+            this.tbMinimo.Location = new System.Drawing.Point(97, 50);
+            this.tbMinimo.Name = "tbMinimo";
+            this.tbMinimo.Size = new System.Drawing.Size(100, 20);
+            this.tbMinimo.TabIndex = 0;
+            this.tbMinimo.Text = "0";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cbFuncionamientoCorrect);
@@ -107,8 +177,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Evaluación Simple";
             // 
+            // cbFuncionamientoCorrect
+            // 
+            this.cbFuncionamientoCorrect.AutoSize = true;
+            this.cbFuncionamientoCorrect.Location = new System.Drawing.Point(217, 31);
+            this.cbFuncionamientoCorrect.Name = "cbFuncionamientoCorrect";
+            this.cbFuncionamientoCorrect.Size = new System.Drawing.Size(178, 17);
+            this.cbFuncionamientoCorrect.TabIndex = 0;
+            this.cbFuncionamientoCorrect.Text = "¿El funcionamiento es correcto?";
+            this.cbFuncionamientoCorrect.UseVisualStyleBackColor = true;
+            // 
             // btSiguiente
             // 
+            this.btSiguiente.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btSiguiente.Location = new System.Drawing.Point(304, 287);
             this.btSiguiente.Name = "btSiguiente";
             this.btSiguiente.Size = new System.Drawing.Size(75, 23);
@@ -126,86 +207,6 @@
             this.dmdDescripcionEvaluacion.Size = new System.Drawing.Size(120, 20);
             this.dmdDescripcionEvaluacion.TabIndex = 6;
             this.dmdDescripcionEvaluacion.Text = "domainUpDown2";
-            // 
-            // tbMinimo
-            // 
-            this.tbMinimo.Enabled = false;
-            this.tbMinimo.Location = new System.Drawing.Point(97, 50);
-            this.tbMinimo.Name = "tbMinimo";
-            this.tbMinimo.Size = new System.Drawing.Size(100, 20);
-            this.tbMinimo.TabIndex = 0;
-            this.tbMinimo.Text = "0";
-            // 
-            // tbMaximo
-            // 
-            this.tbMaximo.Enabled = false;
-            this.tbMaximo.Location = new System.Drawing.Point(249, 50);
-            this.tbMaximo.Name = "tbMaximo";
-            this.tbMaximo.Size = new System.Drawing.Size(100, 20);
-            this.tbMaximo.TabIndex = 1;
-            this.tbMaximo.Text = "30";
-            // 
-            // tbValorMedido
-            // 
-            this.tbValorMedido.Location = new System.Drawing.Point(400, 49);
-            this.tbValorMedido.Name = "tbValorMedido";
-            this.tbValorMedido.Size = new System.Drawing.Size(100, 20);
-            this.tbValorMedido.TabIndex = 2;
-            // 
-            // Porcentaje
-            // 
-            this.Porcentaje.AutoSize = true;
-            this.Porcentaje.Location = new System.Drawing.Point(517, 49);
-            this.Porcentaje.Name = "Porcentaje";
-            this.Porcentaje.Size = new System.Drawing.Size(58, 13);
-            this.Porcentaje.TabIndex = 3;
-            this.Porcentaje.Text = "Porcentaje";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Valores";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Mínimo";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(274, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Máximo";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(414, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Valor Medido";
-            // 
-            // cbFuncionamientoCorrect
-            // 
-            this.cbFuncionamientoCorrect.AutoSize = true;
-            this.cbFuncionamientoCorrect.Location = new System.Drawing.Point(217, 31);
-            this.cbFuncionamientoCorrect.Name = "cbFuncionamientoCorrect";
-            this.cbFuncionamientoCorrect.Size = new System.Drawing.Size(178, 17);
-            this.cbFuncionamientoCorrect.TabIndex = 0;
-            this.cbFuncionamientoCorrect.Text = "¿El funcionamiento es correcto?";
-            this.cbFuncionamientoCorrect.UseVisualStyleBackColor = true;
             // 
             // FormEvaluacion
             // 
@@ -231,22 +232,21 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btSiguiente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Porcentaje;
-        private System.Windows.Forms.TextBox tbValorMedido;
-        private System.Windows.Forms.TextBox tbMaximo;
-        private System.Windows.Forms.TextBox tbMinimo;
-        private System.Windows.Forms.DomainUpDown dmdDescripcionEvaluacion;
         private System.Windows.Forms.CheckBox cbFuncionamientoCorrect;
+        public System.Windows.Forms.DomainUpDown domainUpDown1;
+        public System.Windows.Forms.DomainUpDown dmdDescripcionEvaluacion;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.TextBox tbMaximo;
+        public System.Windows.Forms.TextBox tbMinimo;
+        public System.Windows.Forms.TextBox tbValorMedido;
     }
 }

@@ -39,7 +39,7 @@ namespace Ejercicio1_VerificaciónTécnicaVehicular.Models
         }
         public override string ToString()
         {
-            return base.ToString()+$"\r\nUnidad: {Unidad}\r\nTipo Evaluación: {Evaluar()}\r\nValor Tolerado: {ValorTolerado}";
+            return base.ToString()+$"\r\nUnidad: {Unidad}\r\nTipo Evaluación: {Evaluar()}\r\nValor Tolerado: {ValorTolerado}\r\n\r\n";
         }
     }
 }
